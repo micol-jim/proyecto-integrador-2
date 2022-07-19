@@ -1,0 +1,244 @@
+body {
+    background-color: #fbfbfb;
+    color: #0f0f0f;
+    font-size: 18px;
+    line-height: 1.2;
+}
+
+* {
+    font-family: 'Lato', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: #fbfbfb;
+    width: 100%;
+    padding: 16px;
+    height: 80px;
+    box-shadow: 0 2px 4px 0 #5f5f5f;
+}
+
+#logo {
+    width: 120px;
+}
+
+nav {
+    display: none;
+}
+
+ul#menú-principal {
+    display: flex;
+    font-size: 20px;
+}
+.menu-item {
+    color: black;
+    padding: 16px;
+    display: inline-block;
+}
+
+.menu-item:hover {
+    transition: background-color 0.3s;
+    background-color: rgba(175, 89, 158, 0.5);
+    color: #fbfbfb;
+}
+
+/* boton hamburguesa */
+#menu-boton {
+    background: transparent;
+    border: 0;
+    outline: 0;
+    width: 40px;
+    height: 40px;
+}
+
+img#cerrar-menu {
+    display: none;
+}
+
+body.mobile-menu-active img#cerrar-menu {
+    display: block;
+}
+
+body.mobile-menu-active img#abrir-menu {
+    display: none;
+}
+
+body.mobile-menu-active header {
+    height: 100vh;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    transition: height 0.3s;
+}
+
+body.mobile-menu-active nav {
+    display: block;
+    width: 100%;
+    height: 50%;
+}
+
+body.mobile-menu-active ul#menú-principal {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+}
+
+body.mobile-menu-active {
+    overflow: hidden;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+main {
+    padding-top: 100px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+section {
+    height: 100vh;
+    scroll-margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 100vh;
+}
+
+article {
+    width: 50%;
+}
+
+#portada {
+    width: 400px;
+    border-radius: 100%;
+    max-width: 100%;
+}
+
+h1 {
+    color: #8b2b78;
+    font-size: 48px;
+}
+
+p {
+    line-height: 25px;
+    text-align: justify;
+    margin: 20px 0;
+}
+
+#boton {
+    font-size: 20px;
+    background: #af599e;
+    color: #fbfbfb;
+    padding: 10px 16px;
+    border-radius: 20px;
+}
+
+#boton:hover {
+    transition: background-color 0.3s;
+    background-color: rgba(175, 89, 158, 0.8);
+    color: #fbfbfb;
+}
+
+#hablemos {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+h2 {
+        background-color: rgba(175, 89, 158, 0.3);
+        text-align: center;
+        justify-content: center;
+        padding: 12px;
+        margin: 0;
+        width: 400px;
+    }
+
+#contactar {
+        background-color: rgba(175, 89, 158, 0.3);
+        text-align: center;
+        justify-content: center;
+        padding: 12px;
+        margin: 0;
+        width: 400px;
+}
+
+    ul#contacto {
+        display: flex;
+        display: flex;
+        justify-content: center;
+    }
+    
+    #contacto a img { 
+        width: 80px;
+        margin: 10px #fbfbfb;
+        padding: 10px;
+        border-radius: 15%;
+        cursor: pointer;
+        background-color: #fbfbfb;
+    }
+    
+    #contacto {
+        margin: 48px;
+        width: 60px;
+    }
+    
+    #contacto a img:hover {
+        background-color: rgba(175, 89, 158, 0.3);
+        transition: background-color 0.3s;
+    }
+
+footer {
+
+    color: #fbfbfb;
+    text-align: center;
+    background-color: #af599e;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+@media (min-width: 1024px) {
+    #menu-boton {
+        display: none;
+    }
+
+    nav {
+        display: block;
+    }
+
+    body.mobile-menu-active header {
+        height: 90px;
+        align-items: center;
+    }
+
+    body.mobile-menu-active nav {
+        height: auto;
+        width: auto;
+    }
+
+    body.mobile-menu-active ul#menú-principal {
+        flex-direction: row;
+    }
+
+}
