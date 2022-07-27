@@ -52,6 +52,8 @@ ul#menú-principal {
     color: #fbfbfb;
 }
 
+a:active { color: lime; }
+
 /* boton hamburguesa */
 #menu-boton {
     background: transparent;
@@ -117,12 +119,12 @@ section {
     scroll-margin-top: 100px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     min-height: 100vh;
 }
 
 article {
-    width: 50%;
+    width: 80%;
 }
 
 #portada {
