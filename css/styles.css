@@ -52,9 +52,8 @@ ul#menú-principal {
     color: #fbfbfb;
 }
 
-a:active { color: lime; }
-
 /* boton hamburguesa */
+
 #menu-boton {
     background: transparent;
     border: 0;
