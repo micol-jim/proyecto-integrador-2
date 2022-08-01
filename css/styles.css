@@ -1,5 +1,6 @@
 body {
-    background-color: #fbfbfb;
+    background: rgb(255,255,255);
+background: linear-gradient(0deg, rgba(255,255,255,1) 50%, rgba(255,123,190,0.7511379551820728) 100%);
     color: #0f0f0f;
     font-size: 18px;
     line-height: 1.2;
@@ -25,7 +26,7 @@ header {
     width: 100%;
     padding: 16px;
     height: 80px;
-    box-shadow: 0 2px 4px 0 #5f5f5f;
+    box-shadow: 0 3px 10px -5px #5f5f5f;
 }
 
 #logo {
@@ -46,9 +47,9 @@ ul#menú-principal {
     display: inline-block;
 }
 
-.menu-item:hover {
+.menu-item:hover, li.menu-item.active {
     transition: background-color 0.3s;
-    background-color: rgba(175, 89, 158, 0.5);
+    background-color: rgba(255, 57, 196, 0.384);
     color: #fbfbfb;
 }
 
@@ -108,18 +109,20 @@ a {
 }
 
 main {
-    padding-top: 100px;
     max-width: 1200px;
     margin: auto;
 }
 
 section {
-    height: 100vh;
     scroll-margin-top: 100px;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     min-height: 100vh;
+    padding: 16px;
+    padding-top: 100px;
+
 }
 
 article {
@@ -133,53 +136,51 @@ article {
 }
 
 h1 {
-    color: #8b2b78;
+    color: rgba(240, 33, 178, 0.904);
     font-size: 48px;
+    text-align: center;
 }
 
-p {
+#presentacion {
     line-height: 25px;
     text-align: justify;
-    margin: 20px 0;
+    margin: 20px 20px;
 }
 
 #boton {
     font-size: 20px;
-    background: #af599e;
+    background: rgba(240, 33, 178, 0.904);
     color: #fbfbfb;
-    padding: 10px 16px;
-    border-radius: 20px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    display: inline-block;
 }
 
 #boton:hover {
     transition: background-color 0.3s;
-    background-color: rgba(175, 89, 158, 0.8);
+    background-color: rgba(255, 57, 196, 0.384);
     color: #fbfbfb;
 }
 
 #hablemos {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
 }
 
-h2 {
-        background-color: rgba(175, 89, 158, 0.3);
+article.cuadro-hablemos {
+        background-color: rgba(255, 0, 179, 0.5);
+        color: #fbfbfb;
         text-align: center;
         justify-content: center;
-        padding: 12px;
-        margin: 0;
+        padding: 20px;
         width: 400px;
+        border-radius: 16px;
     }
 
 #contactar {
-        background-color: rgba(175, 89, 158, 0.3);
-        text-align: center;
-        justify-content: center;
-        padding: 12px;
-        margin: 0;
-        width: 400px;
+    padding: 16px;
 }
 
     ul#contacto {
@@ -189,9 +190,9 @@ h2 {
     }
     
     #contacto a img { 
-        width: 80px;
+        width: 100px;
         margin: 10px #fbfbfb;
-        padding: 10px;
+        padding: 20px;
         border-radius: 15%;
         cursor: pointer;
         background-color: #fbfbfb;
@@ -203,23 +204,38 @@ h2 {
     }
     
     #contacto a img:hover {
-        background-color: rgba(175, 89, 158, 0.3);
+        background-color: rgba(255, 57, 196, 0.26);
         transition: background-color 0.3s;
     }
 
 footer {
 
+
     color: #fbfbfb;
     text-align: center;
-    background-color: #af599e;
-    height: 90px;
+    font-size: 12px;
+    background-color: rgba(228, 11, 163, 0.616);
+    height: 75px;
     display: flex;
     justify-content: center;
     align-items: center;
 
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1024px){
+    
+    section#inicio {
+        flex-direction: row;
+    }
+
+    h1 { font-size: 48px;
+        text-align:justify;
+    }
+
+    h2 {
+         font-size: 32x;
+    }
+
     #menu-boton {
         display: none;
     }
@@ -240,6 +256,10 @@ footer {
 
     body.mobile-menu-active ul#menú-principal {
         flex-direction: row;
+    }
+
+    body.mobile-menu-active {
+        overflow: auto;
     }
 
 }
