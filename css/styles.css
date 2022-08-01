@@ -191,12 +191,11 @@ article.cuadro-hablemos {
     
     #contacto a img { 
         width: 100px;
-        margin: 10px #fbfbfb;
+        margin: 10px;
         padding: 20px;
         border-radius: 15%;
         cursor: pointer;
-        background-color: #fbfbfb;
-    }
+        }
     
     #contacto {
         margin: 48px;
